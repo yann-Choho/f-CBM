@@ -1,0 +1,18 @@
+numpy==1.26.4
+accelerate==1.8.0
+sentence-transformers
+hdbscan
+umap-learn
+torch==2.2.0+cu118
+torchvision==0.17.0+cu118
+torchaudio==2.2.0+cu118
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+openpyxl
+transformers==4.43.2
+captum==0.7.0
+scikit-learn==1.5.0
+tabulate
+jupyter
+ipywidgets
+datasets

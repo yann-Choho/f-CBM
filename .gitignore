@@ -1,0 +1,41 @@
+# Secrets / env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+*secret*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Data / checkpoints / results (too large for git).
+# `/data/` is anchored on purpose: an unanchored `data/` would also ignore
+# the source folder CT-CBM/run_experiments/data/.
+/data/
+*.ckpt
+*.pt
+*.pth
+checkpoints/
+results/
+wandb/
+
+# OS / editors
+.DS_Store
+.vscode/
+
+# Annotation scripts (not released yet)
+annotations/
+
+# Exploratory notebooks (not released yet)
+notebooks/exploratory/
+
+# Intervention artefacts
+saved_models/
+*.joblib
+# NB: saved_intervention_results/ is deliberately NOT ignored -
+# those small JSONs are the source data of Figure 7.

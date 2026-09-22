@@ -41,6 +41,7 @@ f-CBM/
 ├── scripts/download_data.py  fetches the datasets (see "Data")
 ├── requirements.txt
 ├── LICENSE                   MIT
+├── NOTICE                    third-party attributions
 └── data/                     NOT in git - created by scripts/download_data.py
 ```
 
@@ -260,3 +261,4 @@ file are skipped, so the search can be interrupted and resumed.
 
 The code is released under the [MIT licence](LICENSE): use it as you would the code of
 any paper, with attribution. The datasets keep their own licences (see *Data*).
+Third-party code included or adapted in `src/` is listed in [NOTICE](NOTICE).

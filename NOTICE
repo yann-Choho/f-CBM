@@ -1,0 +1,60 @@
+f-CBM — Towards Faithful Multimodal Concept Bottleneck Models
+Copyright (c) 2026 Yann Choho
+
+This product is released under the MIT License (see LICENSE).
+It includes or adapts third-party material listed below; the original
+copyright notices and licence terms of that material are retained.
+
+--------------------------------------------------------------------------------
+1. Gumbel-sigmoid  —  BSD-3-Clause
+--------------------------------------------------------------------------------
+Used in: src/CBM_model.py (gumbel_sigmoid)
+
+Adapted from PyTorch's `torch.nn.functional.gumbel_softmax`, via
+    https://github.com/AngelosNal/PyTorch-Gumbel-Sigmoid
+
+PyTorch is Copyright (c) 2016-present, Facebook Inc. and its affiliates,
+and is distributed under the BSD-3-Clause licence:
+    https://github.com/pytorch/pytorch/blob/main/LICENSE
+
+--------------------------------------------------------------------------------
+2. CPO concept loss  —  Apache-2.0
+--------------------------------------------------------------------------------
+Used in: src/CBM_model.py (cpo_loss)
+
+Follows the method of arXiv:2504.18026 (https://arxiv.org/abs/2504.18026),
+with an implementation derived from
+    https://github.com/Emilianopp/direct-preference-optimization
+which is distributed under the Apache License 2.0:
+    http://www.apache.org/licenses/LICENSE-2.0
+
+--------------------------------------------------------------------------------
+3. Differentiable mutual-information estimator  —  MIT
+--------------------------------------------------------------------------------
+Used in: src/CBM_model.py (differentiable_mutual_info, and the leakage loss
+         built on it)
+
+Follows arXiv:2504.14094 (https://arxiv.org/abs/2504.14094), with an
+implementation derived from
+    https://github.com/enricoparisini/xai-concept-leakage
+which is distributed under the MIT licence.
+
+--------------------------------------------------------------------------------
+Reimplementations (no third-party code copied)
+--------------------------------------------------------------------------------
+The following are our own implementations of published methods. They are
+listed for academic attribution, not because any code was reused.
+
+* src/KAN.py — B-spline Kolmogorov-Arnold layer, following
+  Liu et al., arXiv:2404.19756 (https://arxiv.org/abs/2404.19756).
+
+* The `cos_cubed` concept loss (src/CBM_model.py) reimplements the concept
+  loss of Label-free CBM / CB-LLM, arXiv:2304.06129
+  (https://arxiv.org/abs/2304.06129).
+
+--------------------------------------------------------------------------------
+Datasets
+--------------------------------------------------------------------------------
+No dataset is redistributed by this repository. CUB-200-2011 (Caltech),
+N24News (Wang et al., LREC 2022; New York Times content), AG News and DBpedia
+each keep their own terms; see the "Data" section of README.md.
